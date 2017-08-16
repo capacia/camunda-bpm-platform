@@ -52,6 +52,7 @@ import org.camunda.bpm.engine.history.NativeHistoricCaseInstanceQuery;
 import org.camunda.bpm.engine.history.NativeHistoricDecisionInstanceQuery;
 import org.camunda.bpm.engine.history.NativeHistoricProcessInstanceQuery;
 import org.camunda.bpm.engine.history.NativeHistoricTaskInstanceQuery;
+import org.camunda.bpm.engine.history.NativeHistoricVariableInstanceQuery;
 import org.camunda.bpm.engine.history.UserOperationLogEntry;
 import org.camunda.bpm.engine.history.UserOperationLogQuery;
 import org.camunda.bpm.engine.history.HistoricDecisionInstanceStatisticsQuery;
@@ -333,6 +334,11 @@ public interface HistoryService {
    * creates a native query to search for {@link HistoricDecisionInstance}s via SQL
    */
   NativeHistoricDecisionInstanceQuery createNativeHistoricDecisionInstanceQuery();
+
+  /**
+   * creates a native query to search for {@link HistoricVariableInstance}s via SQL
+   */
+  NativeHistoricVariableInstanceQuery createNativeHistoricVariableInstanceQuery();
 
   /**
    * Creates a new programmatic query to search for {@link HistoricJobLog historic job logs}.
